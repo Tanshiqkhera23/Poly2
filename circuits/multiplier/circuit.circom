@@ -1,25 +1,15 @@
 pragma circom 2.0.0;
 
 template Circuit () {
-
-    // Signal input a and b
-
     signal input a;
     signal input b;
 
-    // Intermidiate signals x and y
     signal x;
     signal y;
-
-    //output of whole circuit
     signal output q;
-
-    // function for gates
     component andGate = AND();
     component notGate = NOT();
     component orGate = OR();
-
-    //logic
     andGate.a <== a;
     andGate.b <== b;
     x <== andGate.out;
